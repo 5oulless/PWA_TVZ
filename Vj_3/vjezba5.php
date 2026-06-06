@@ -2,7 +2,6 @@
 // --- PHP blok na početku ---
 $naslov     = "PHP dokument - vježba 5";
 $autor      = "Renato Dominkuš";
-$opis       = "Ova stranica je nadogradnja vježbe 1d: izračunavanje vrijednosti iz korisničkih unosa";
 $varijabla_a = isset($_GET["var_a"]) ? (int)$_GET["var_a"] : null;
 $varijabla_rand = rand(1,10);
 
