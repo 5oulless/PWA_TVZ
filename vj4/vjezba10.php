@@ -5,7 +5,7 @@ $autor      = "Renato Dominkuš";
 
 $ulaz = isset($_POST["ulniz"]) ? $_POST["ulniz"] : "";
 
-  $bg = "#f5edba";  // svijetla pozadina
+  $bg = "#f5edba";  // svijetla pozadina 
   $card = "#ffffff";
   $text = "#271a54";
   $muted = "#a8a8a8";
