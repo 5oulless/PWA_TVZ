@@ -145,7 +145,7 @@ switch($operator){
         <main class="card_wrap">
             <h1><?php echo htmlspecialchars($naslov) ?></h1>
             <p>Ovu stranicu izradio je <strong><?php echo htmlspecialchars($autor) ?></strong>.</p>
-            <form method="get" action="vjezba5.php">
+            <form method="get" action="vjezba6.php">
                 <label>Kalkulator (Switch naredba)</label>
                 <label>Upiši prvi broj <input type="number" name="var_a" required></label>
                 <label>Upiši drugi broj <input type="number" name="var_b" required></label>
