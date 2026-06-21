@@ -4,26 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 require "connection.php";
 
-if(isset($_POST['register']))
-{
-    $ime = $_POST['ime'];
-    $prezime = $_POST['prezime'];
-    $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $stmt = mysqli_prepare($dbc,
-        "INSERT INTO korisnik (ime, prezime, korisnicko_ime, lozinka)
-         VALUES (?, ?, ?, ?)"
-    );
-
-    mysqli_stmt_bind_param($stmt, "ssss",
-        $ime, $prezime, $username, $password
-    );
-
-    mysqli_stmt_execute($stmt);
-
-    echo "Registracija uspješna. <a href='login.php'>Login</a>";
-}
 ?>
 <!DOCTYPE html>
 <html lang="hr">
@@ -56,6 +37,28 @@ if(isset($_POST['register']))
     <input type="password" name="password" placeholder="Password">
     <br>
     <button type="submit" name="register">Registracija</button>
+    <?php
+    if(isset($_POST['register']))
+{
+    $ime = $_POST['ime'];
+    $prezime = $_POST['prezime'];
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    $stmt = mysqli_prepare($dbc,
+        "INSERT INTO korisnik (ime, prezime, korisnicko_ime, lozinka)
+         VALUES (?, ?, ?, ?)"
+    );
+
+    mysqli_stmt_bind_param($stmt, "ssss",
+        $ime, $prezime, $username, $password
+    );
+
+    mysqli_stmt_execute($stmt);
+
+    echo "<p>Registracija uspješna. <a href='login.php'>Login</a></p>";
+}
+    ?>
 </form>
 </main>
 <?php include 'footer.php'?>
