@@ -1,0 +1,63 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require "connection.php";
+
+if(isset($_POST['register']))
+{
+    $ime = $_POST['ime'];
+    $prezime = $_POST['prezime'];
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    $stmt = mysqli_prepare($dbc,
+        "INSERT INTO korisnik (ime, prezime, korisnicko_ime, lozinka)
+         VALUES (?, ?, ?, ?)"
+    );
+
+    mysqli_stmt_bind_param($stmt, "ssss",
+        $ime, $prezime, $username, $password
+    );
+
+    mysqli_stmt_execute($stmt);
+
+    echo "Registracija uspješna. <a href='login.php'>Login</a>";
+}
+?>
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <meta name="description" content="Projektni zadatak PWA">
+    <meta name="author" content="Renato Dominkuš">
+    <title>El Confidencial</title>   
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>El Confidencial</h1>
+        <p>EL DIARIO DE LOS LECTORES INFLUYENTES</p>
+        <?php include 'navigation.php'?>
+    </header>
+<main class="container">
+<form method="POST" class="formaLogin">
+    <input type="text" name="ime" placeholder="Ime">
+    <br>
+    <input type="text" name="prezime" placeholder="Prezime">
+    <br>
+    <input type="text" name="username" placeholder="Username">
+    <br>
+    <input type="password" name="password" placeholder="Password">
+    <br>
+    <button type="submit" name="register">Registracija</button>
+</form>
+</main>
+<?php include 'footer.php'?>
+
+</body>

@@ -1,0 +1,289 @@
+*{ 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+} 
+
+body{ 
+    font-family: Georgia, serif; 
+    background:#ffffff; 
+} 
+
+
+.container{ 
+    width:60%; 
+    margin:0 auto; 
+} 
+
+header{ 
+    text-align:center; 
+    padding:40px 0 20px;
+    background:white; 
+    padding-bottom: 0px;
+    border-bottom:1px solid #ccc; 
+} 
+
+header h1{ 
+    font-size:64px; 
+    color:#003b52; 
+} 
+
+header p{ 
+    color:#777; 
+    letter-spacing:4px; 
+    font-size:14px; 
+} 
+
+nav{ 
+    margin-top:25px;  
+    padding:15px 0; 
+} 
+
+nav ul{ 
+    list-style:none; 
+    display:flex; 
+    justify-content:center; 
+    gap:40px; 
+} 
+
+nav a{ 
+    text-decoration:none; 
+    color:#000; 
+    font-weight:bold; 
+} 
+
+section{
+    border-top: 2px solid black; 
+    padding:50px 0; 
+} 
+.section-title{ 
+    display: flex;
+    font-size:40px; 
+    margin-bottom:30px;
+    align-items: center;
+    gap:12px; 
+} 
+#europe::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #85500a;
+    display: block;
+}
+#clanEu{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: normal;
+    font-weight: bold;
+    padding-left: 10rem;
+    margin-bottom: 5px;
+    display: flex;
+    
+}
+#clanEu::before{
+    margin-top: 5px;
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-right: 1rem;
+    background-color: #0d0aa3;
+    display: block;
+}
+#technology::before{
+    margin-top: 5px;
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-right: 1rem;
+    background-color: #5c0c81;
+    display: block;
+}
+#clanTeh{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: normal;
+    font-weight: bold;
+    padding-left: 10rem;
+    margin-bottom: 5px;
+    display: flex;
+}
+#clanTeh::before{
+    margin-top: 5px;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #11ad40;
+    margin-right: 1rem;
+    display: block;
+}
+.news-grid{ 
+    display:flex; 
+    gap:25px; 
+} 
+.article{ 
+    width:33.33%; 
+} 
+
+.article img{ 
+    width:100%; 
+    height:220px; 
+    object-fit:cover; 
+} 
+
+.article h3{
+    font-family: 'Merriweather', serif;
+    margin-top:15px;
+    font-size: 28px;
+    font-weight: 700; 
+    min-height: 110px;
+    line-height:1.2; 
+} 
+
+
+.article a{ 
+    text-decoration:none; 
+    color:#222; 
+} 
+
+.date{ 
+    color:gray;  
+    font-size:14px;
+    border-left: 1px solid gray;
+    padding-left: 1rem; 
+} 
+
+footer{ 
+    text-align:center; 
+    padding:30px; 
+    margin-top:50px; 
+    background:white; 
+}
+footer a{
+    padding-left: 1rem;
+    text-decoration: none;
+    color:#000;
+}
+
+.clanNaslov{
+    text-align: center;
+    font-size: 48px;
+    width: 80%;
+    margin: 0 auto;
+}
+.clanOutline{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid grey;
+}
+.clanOutline img{
+    width:70%;
+    margin: 20px auto;
+}
+.clanOutline p{
+    margin: 20px auto;
+    width: 60%;
+}
+.clanOutline h2{
+    margin: 20px auto;
+}
+.container2 {
+    width:40%; 
+    margin:0 auto; 
+}
+.container2 p {
+    line-height: 2;
+}
+.kategorijeGrid{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+.kategorijeArticle{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    border-bottom:1px solid #ddd;
+    padding-top:20px;
+}
+.kategorijeArticle a{
+    text-decoration: none;
+    color: black;
+}
+
+.kategorijeArticle img{
+    width:200px;
+    height:140px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.kategorijeArticle h3{
+     font-family:'Merriweather', serif;
+    font-size:22px;
+    margin:0;
+    min-height:auto;
+}
+
+.kategorijeArticleContent{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.kategorijeArticle p{
+     margin:0;
+}
+.pagination {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0;
+}
+.pagination a{
+    text-decoration: none;
+    color: black;
+}
+
+td a{
+    color: black;
+
+}
+td{
+    padding-left:1rem ;
+}
+th{
+    padding-left: 1rem;
+}
+
+.inputtext{
+    width: 80%;
+    margin: 0 auto;
+}
+textarea{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.stranice{
+    margin:5px; 
+    padding:5px; 
+    text-decoration:none;
+}
+#currentPage{
+    font-weight:bold; 
+    text-decoration:underline;
+}
+.formaLogin{
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.formaLogin input{
+    margin: 5px 0;
+}
+.loginMsg{
+    text-align: center;
+    margin: 5px 0;
+}
